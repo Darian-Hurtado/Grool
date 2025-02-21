@@ -598,7 +598,7 @@ footer h2 {
     min-width: 280px;
     height: auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     .head-portfolio h1 { 
         font-size: 40px;
         padding-left: 24px;
