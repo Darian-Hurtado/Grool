@@ -613,9 +613,11 @@ footer h2 {
 .titulo-pag-detalle h1 {
     text-align: left;
     border-bottom: 2.5px solid white; /* Línea inferior */
+    color: #fff;
     margin-bottom: 20px;
     font-size: 70px;
     padding-bottom: 20px;
+    margin: 0px;
 }
 
 .columnas-proyecto {
