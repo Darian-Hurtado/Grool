@@ -15,6 +15,7 @@ h1 {
     margin-top: 130px;
     margin-bottom: 20px;
     width: 50%;
+    font-weight: 600;
 }
 
 p {
@@ -81,7 +82,7 @@ header {
     font-family: "Lexend Deca", serif;
 }
 
-.navbar {
+.navbarpropio {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -276,6 +277,7 @@ header span {
 
 #seccion-equipo {
     margin: 70px;
+    margin-top: 0px;
     margin-bottom: 0px;
 }
 
@@ -296,7 +298,8 @@ header span {
 
 @media (max-width: 768px) {
     #seccion-equipo { 
-        margin: 24px
+        margin-left: 24px; 
+        margin-right: 24px;
     }
 }
 
@@ -358,24 +361,38 @@ header span {
     background-color: #892be100;
 }
 
+@media (max-width: 768px) {
+    .titulo-formulario { 
+        margin: 24px
+    }
+    .flecha {
+        margin: 24px
+    }
+}
+
 /* Estilos footer */
+.flex-logo {
+    display: flex;
+    flex-direction:row;
+}
 footer {
     background-color: black;
-    background-image: image();
-    margin-top: 0px;
+    background-image: url("../imagenes/difuminado.png");
     font-family: "Lexend Deca", serif;
-    margin-right: 70px;
-    margin-left: 70px;
     display: flex; /* Activa flexbox */
     justify-content: space-between; /* Coloca el texto a la izquierda y el logo a la derecha */
     align-items: end;
     padding-bottom: 100px; /* Espaciado interno del footer */
+    padding-left: 70px;
+    padding-right: 70px;
+    flex-wrap: wrap;
 }
 
 .logo-blanco {
     width: 300px; /* Define el ancho deseado */
     height: auto; /* Mantiene la proporción original de la imagen */
     margin-left: 70px;
+    margin-top: 50px;
 }
 
 footer h2 {
@@ -396,28 +413,66 @@ footer ul a {
     color: #fff;
 }
 
+@media (max-width: 768px) {
+    .logo-blanco { 
+        align-self: center;
+        width: 250px;
+        margin-top: 120px;
+        margin-bottom: 50px;
+        margin: 0px;
+        padding: 20px;
+    }
+}
+
 /* organizacion accesos footer*/
 .enlaces-footer {
     display: flex;
     justify-content:flex-start;
     flex-wrap: wrap;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
+    align-items: flex-end;
 }
 
 .footer-columna {
     min-width: 200px;
     justify-content:flex-start;
+    margin: 0px;
 }
+
+footer h2 {
+    text-align: left;
+    margin: 0px;
+}
+
 
 .redes-sociales {
     display: flex;
     justify-content:flex-start;
     gap: 30px;
+    margin: 0px;
+    padding: 0px;
 }
 
 .iconos-redes {
     width: 50px; /* Define el ancho deseado */
     height: auto; /* Mantiene la proporción original de la imagen */
+}
+
+@media (max-width: 500px) {
+    footer {
+        margin: 0px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 70px;
+    }
+
+    .redes-sociales {
+        gap: 15px;
+    }
+    .iconos-redes { 
+        width: 50px;
+    }
 }
 
 /* Página quienes somos */
@@ -525,20 +580,36 @@ footer ul a {
 
 .imagenes-portfolio {
     display: flex;
-    justify-content: space-between; /* Distribuye las imágenes uniformemente */
-    align-items: center; /* Alinea las imágenes verticalmente */
-    flex-wrap: wrap; /* Permite que se acomoden en varias líneas si es necesario */
-    margin-right: 70px;
-    padding-bottom: 20px;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+    padding: 40px;
 }
 
-.imagenes-portfolio img { 
-    max-width: 500px;
-    min-width: 310px;
+.imagenes-portfolio div {
+    display: flex;
+    justify-content: center; /* Centra la imagen dentro del div */
+    align-items: center;
+}
+
+.imagenes-portfolio1 { 
+    max-width: 450px;
+    min-width: 280px;
     height: auto;
 }
+@media (max-width: 768px) {
+    .head-portfolio h1 { 
+        font-size: 40px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
 
+}
 /* Detalle portfolio */
+.fondo-negro-detalle {
+    background-color: black;
+}
 .titulo-pag-detalle h1 {
     text-align: left;
     border-bottom: 2.5px solid white; /* Línea inferior */
@@ -573,18 +644,18 @@ footer ul a {
 }
 
 .concepto-generador {
-    display: flex; /* Necesario para que justify-content y align-items funcionen */
-    flex-direction: column; /* Para apilar el h2 y el p en columna */
+    display: flex; 
+    flex-direction: column; 
     justify-content: center; /* Centra verticalmente */
     align-items: center; /* Centra horizontalmente */
-    text-align: center; /* Asegura que el texto dentro de h2 y p esté centrado */
+    text-align: center;
     margin: 70px;
 }
 
 .fondo {
     width: 100%;
     height: auto; 
-    background-image: url(imágenes/difuminado.png);
+    background-image: url(../imagenes/difuminado.png);
     background-size: cover; 
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
