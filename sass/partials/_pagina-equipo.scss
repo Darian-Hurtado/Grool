@@ -1,0 +1,94 @@
+/* Página quienes somos */
+.head-equipo {
+    color: #0000;
+    background:  radial-gradient(circle at 1% 80%, #ffffff, #892be128, #ffffff, #fded953e, #fe97082d);
+    margin: 0px;
+    
+    .titulo-pag-equipo {
+        .linea-quiensomos {
+            margin: 70px;
+            border-bottom: 3px solid black; /* Línea inferior */
+            margin-bottom: 20px;
+            h1 {
+                font-family: "Lexend Deca", serif;
+                font-weight: 500;
+                font-size: 90px;
+                margin-top: 120px;
+                margin-bottom: 20px;
+                margin-left: 0px;
+            } 
+        }
+        
+    }
+    .principal-equipo {
+        width: 100%;
+        display: block;
+        height: auto;
+        margin: 0px;
+        padding: 70px;
+        padding-top: 20px;
+    }
+    .columnas-equipo {
+        display: flex;
+        width: 100%;
+        align-items: flex-start; /* Centra verticalmente en desktop */
+        justify-content: space-between; /* Distribuye los elementos equitativamente */
+        padding-bottom: 120px;
+    
+        .texto-equipo {
+            width:100%; /* Ocupa la mitad en desktop */
+            padding-left: 70px;
+            margin-bottom: 20px; /* Agrega separación entre párrafos */
+            line-height: 1.6; /* Mejora la legibilidad */
+        }
+
+        .imagen2-equipo img {
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Centra la imagen */
+        }
+        }
+
+}
+
+@media (max-width: 500px) {
+.head-equipo{
+    .titulo-pag-equipo {
+
+        .linea-quiensomos {
+            margin: 24px;
+            h1 {
+                font-size: 40px;
+                margin-bottom: 0px;
+            } 
+        }
+        }
+    
+    .principal-equipo {
+        padding: 24px;
+    }
+    .columnas-equipo {
+        margin: 0px;
+        flex-direction: column-reverse; /* Cambia a una sola columna */
+        text-align: left; /* Centra el texto */
+        p { 
+            margin-right: 24px;
+            margin-left: 24px;
+        }
+        .texto-equipo {
+            padding-left: 0px;
+            margin: 0px;
+            margin-right: 0px;
+            img {
+                display: flex;
+                align-items: flex-start;}
+        }
+    }
+
+    .imagen2-equipo {
+        width: 100%; /* Ocupan todo el ancho */
+        margin-top: 20px; /* Espacio entre el texto y la imagen */
+        max-width: 350px;
+    }
+}
+}

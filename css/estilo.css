@@ -101,7 +101,7 @@ header .cta-button {
   display: inline-block;
   padding: 15px 25px;
   color: black;
-  border: black, solid;
+  border: 3px black, solid;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
@@ -149,23 +149,48 @@ header .cta-button:active {
     background: conic-gradient(from 340deg, #FDED95 1%, #fe9808 18%, #c46275 25%, #8a2be1 33%, #8a2be1 50%, #FDED95 68%, #ffffff 92%, #FDED95 99%);
   }
 }
+#seccion-filosofia {
+  position: relative;
+  overflow: hidden; /* Evita que el texto sobresalga */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500 px; /* Asegura que el título tenga su propia área */
+  padding-top: 25px; /* Espaciado para que no toque el borde */
+}
+#seccion-filosofia span {
+  color: #8a2be1;
+}
 #seccion-filosofia .titulo-quienes-somos {
   color: rgba(137, 43, 225, 0.2666666667);
   font-weight: 500;
   font-size: 98.6px;
-  white-space: nowrap; /* Evita que el texto pase a la siguiente línea */
-  overflow: hidden; /* Oculta el texto que excede el ancho */
-  margin-right: 0px;
+  white-space: nowrap; /* Evita que el texto salte de línea */
+  position: absolute;
+  top: 0;
+  left: 100%;
+  animation: marquee 15s linear infinite;
+  animation-delay: -5s;
 }
 #seccion-filosofia .descripcion-grool {
   width: 50%;
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 150px;
   line-height: 150%;
-  margin-top: 70px;
+  margin-top: 200px;
+  margin-bottom: 70px;
 }
 
+/* Animación del título */
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
 @media (max-width: 500px) {
   #seccion-filosofia .titulo-quienes-somos {
     margin-left: 24px;
@@ -184,13 +209,32 @@ header .cta-button:active {
 }
 #seccion-servicios div {
   border-top: 1.5px solid white; /* Línea superior */
-  margin: 70px;
+  padding: 70px;
 }
-#seccion-servicios div h3 { /* elimimina margen general (p) para trabajar div */
+#seccion-servicios div h3 { /* elimimina smargen general (p) para trabajar div */
   margin-left: 0px;
 }
 #seccion-servicios div p { /* elimimina margen general (p) para trabajar div*/
   margin-left: 0px;
+}
+#seccion-servicios .hover-diseno-grafico, #seccion-servicios .hover-consultoria, #seccion-servicios .hover-diseno-web, #seccion-servicios .hover-marketing-dijital {
+  width: fit-content;
+  height: auto;
+  display: block; /* Si es un elemento inline, no se aplicará el hover correctamente */
+  transition: background-image 0.3s ease-in-out; /* Para que el cambio sea más fluido */
+}
+#seccion-servicios .hover-diseno-grafico:hover, #seccion-servicios .hover-consultoria:hover, #seccion-servicios .hover-diseno-web:hover, #seccion-servicios .hover-marketing-dijital:hover {
+  background-image: url(../imagenes/hover-servicios-1.png);
+  background-size: cover;
+}
+#seccion-servicios .hover-marketing-dijital:hover {
+  background-image: url(../imagenes/hover-servicios-2.png);
+}
+#seccion-servicios .hover-diseno-web:hover {
+  background-image: url(../imagenes/hover-servicios-3.png);
+}
+#seccion-servicios .hover-consultoria:hover {
+  background-image: url(../imagenes/hover-servicios-4.png);
 }
 
 @media (max-width: 768px) {
@@ -200,12 +244,7 @@ header .cta-button:active {
   }
   #seccion-servicios div {
     margin: 24px;
-  }
-}
-@media (max-width: 768px) {
-  .pasos {
-    overflow-x: auto;
-    justify-content: flex-start; /* Centra las imágenes horizontalmente */
+    padding: 20px;
   }
 }
 .fondo-info {
@@ -219,6 +258,7 @@ header .cta-button:active {
   justify-content: center;
   align-items: center;
   white-space: nowrap;
+  overflow-x: auto; /* Permite desplazamiento horizontal */
 }
 .fondo-info .pasos .pasos-detalle {
   min-width: 300px;
@@ -228,7 +268,7 @@ header .cta-button:active {
   padding: 20px;
   margin: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1.5px solid #8a2be1;
 }
 .fondo-info .pasos .pasos-detalle p {
   overflow: hidden; /* Oculta contenido desbordado */
@@ -260,12 +300,15 @@ header .cta-button:active {
   margin-right: 20px;
 }
 
-@media (max-width: 768px) {
-  .pasos {
+@media (max-width: 500px) {
+  .fondo-info .pasos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    white-space: nowrap;
     overflow-x: auto;
-    justify-content: flex-start; /* Centra las imágenes horizontalmente */
   }
-  #seccion-equipo {
+  .fondo-info #seccion-equipo {
     margin-left: 24px;
     margin-right: 24px;
   }

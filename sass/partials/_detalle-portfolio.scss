@@ -1,0 +1,166 @@
+
+// Detalle portfolio
+
+.fondo-negro-detalle {
+    background-color: black;
+
+    .titulo-pag-detalle {
+        h1 {
+            text-align: left;
+            border-bottom: 2.5px solid white; /* Línea inferior */
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 70px;
+            padding-bottom: 20px;
+            margin: 70px;
+        }
+        img { 
+            width: 100%;
+            padding: 70px;
+        }
+    }
+    .fondo {
+        width: 100%;
+        height: auto; 
+        background-image: url(../imagenes/difuminado.png);
+        background-size: cover; 
+        background-position: center; /* Centra la imagen */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        .columnas-proyecto {
+        display: flex;
+        width: 100%;
+        align-items: flex-start; /* Centra verticalmente en desktop */
+        justify-content: space-evenly; /* Distribuye los elementos equitativamente */
+        .texto-proyecto {
+            p {
+            color: white;
+            font-weight: 200;
+            width: 70%; /* Ocupa la mitad en desktop */
+            margin-bottom: 20px; /* Agrega separación entre párrafos */
+            line-height: 2; /* Mejora la legibilidad */
+            letter-spacing: 2px;
+            font-size: 24px;
+                }
+                }
+        .partes-proyecto { 
+            p {
+        color: white;
+        width: 700px; /* Ocupa la mitad en desktop */
+        padding-right:  70px;
+        margin-bottom: 20px; /* Agrega separación entre párrafos */
+        line-height: 3.5; /* Mejora la legibilidad */
+        margin: 0px;
+        font-weight: 200;
+        letter-spacing: 2px;
+                }
+                }
+                }
+    .concepto-generador {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center;
+    margin: 70px;
+
+    .concepto-detalles {
+        min-width: 280px;
+        max-width: 1200px;
+        height: auto;
+        background: rgba(0, 0, 0, 0.366);
+        padding: 40px;
+        margin: 100px;
+        border-radius: 20px;
+        border: 1px, solid white;
+    }
+    h2 {
+        color: white;
+        font-size: 32px;
+        font-weight: 300;
+        align-items: center;
+        margin: 0px;
+        padding: 20px;
+    }
+    p {
+        color: white;
+        font-size: 24px;
+        font-weight: 200;
+        align-items: center;
+        padding: 20px;
+        letter-spacing: 6px;
+        line-height: 35px;
+    }}
+
+    .carrusel-portfolio {
+        display: flex; /* Activa flexbox */
+        justify-content: flex-start; /* Centra las imágenes horizontalmente */
+        align-items: center; /* Alinea las imágenes verticalmente */
+        overflow-x: auto; /* Permite desplazamiento horizontal */
+        white-space: nowrap; /* Evita que las imágenes pasen a una nueva línea */
+        .imagen-detalle-proyecto {
+            width: 80%;
+            height: auto;
+            margin: 70px;
+        }}}
+    }
+
+    @media (max-width: 500px) {
+        .fondo-negro-detalle {
+            .titulo-pag-detalle {
+                h1 {
+                    font-size: 30px;
+                    margin: 24px;
+                }
+                img { 
+                    width: 100%;
+                    padding: 24px;
+                }
+            }
+        .fondo {
+                .columnas-proyecto {
+                display: flex;
+                flex-direction: column; /* Cambia a una sola columna */
+                text-align: left; /* Centra el texto */
+                .texto-proyecto {
+                    p {
+                    width: 95%; 
+                    padding-right: 24px;
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+            }
+            .partes-proyecto { 
+                p {
+                width: 90%;
+                padding-right:  24px;
+                padding-left: 24px;
+                font-weight: 250;
+                    }
+            }
+        }
+            .concepto-generador {
+            margin: 24px;
+                .concepto-detalles {
+                padding: 0px;
+                margin: 24px;
+                }
+                h2 {
+                font-size: 20px;
+                margin: 0px;
+                padding: 20px;
+                }
+                p {
+                font-size: 18px;
+                letter-spacing: 2px;
+                line-height: 28px;
+                padding-top: 0px;
+                }
+            }
+            .carrusel-portfolio {
+                .imagen-detalle-proyecto {
+                    width: 100%;
+                    height: auto;
+                    margin: 24px;
+                }}}
+            } }
+            

@@ -1,6 +1,5 @@
 // vinculo de partials
 @import "partials/_variables";
-
 // estilos
 
 body { 
@@ -126,7 +125,7 @@ header {
         display: inline-block;
         padding: 15px 25px;
         color: black;
-        border: black, solid;
+        border: 3px black, solid;
         border-radius: 30px;
         text-decoration: none;
         font-weight: bold;
@@ -194,24 +193,49 @@ header {
 // Estilos seccion quienes somos
 
 #seccion-filosofia { 
+    position: relative;
+    overflow: hidden; /* Evita que el texto sobresalga */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500 px; /* Asegura que el título tenga su propia área */
+    padding-top: 25px; /* Espaciado para que no toque el borde */
+    
+    span {
+        color: $paleta-violeta;
+    }
     .titulo-quienes-somos { 
         color: #892be144;
         font-weight: 500;
         font-size: 98.60px;
-        white-space: nowrap; /* Evita que el texto pase a la siguiente línea */
-        overflow: hidden; /* Oculta el texto que excede el ancho */
-        margin-right: 0px;
+        white-space: nowrap; /* Evita que el texto salte de línea */
+        position: absolute;
+        top: 0;
+        left: 100%;
+        animation: marquee 15s linear infinite;
+        animation-delay: -5s; 
     }
-        .descripcion-grool {
-            width: 50%;
-            margin: 0 auto;
-            text-align: center;
-            margin-bottom: 150px;
-            line-height: 150%;
-            margin-top: 70px;
-        }
+
+    .descripcion-grool {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 150%;
+        margin-top: 200px;
+        margin-bottom: 70px;
+    }
 }
-    
+
+/* Animación del título */
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-200%);
+    }
+}
 
 @media (max-width: 500px) {
     #seccion-filosofia { 
@@ -233,32 +257,55 @@ header {
     }
     div {
         border-top: 1.5px solid white; /* Línea superior */
-        margin: 70px;
-        h3 { /* elimimina margen general (p) para trabajar div */
+        padding: 70px;
+        h3 { /* elimimina smargen general (p) para trabajar div */
             margin-left: 0px;}
         p { /* elimimina margen general (p) para trabajar div*/
                 margin-left: 0px}
 }
+.hover-diseno-grafico {
+    width: fit-content; 
+    height: auto;
+    display: block; /* Si es un elemento inline, no se aplicará el hover correctamente */
+    transition: background-image 0.3s ease-in-out; /* Para que el cambio sea más fluido */
+    &:hover {
+    background-image: url(../imagenes/hover-servicios-1.png);
+    background-size: cover;
+        }
+        } 
+.hover-marketing-dijital {
+    @extend .hover-diseno-grafico;
+    &:hover {
+    background-image: url(../imagenes/hover-servicios-2.png);
+        }
+        }
+
+.hover-diseno-web {
+    @extend .hover-diseno-grafico;
+    &:hover {
+    background-image: url(../imagenes/hover-servicios-3.png);
+    }
+    }
+.hover-consultoria {
+    @extend .hover-diseno-grafico;
+    &:hover {
+    background-image: url(../imagenes/hover-servicios-4.png);
+        }
+        }    
 }
 
 @media (max-width: 768px) {
     h2 { font-size: 30px;
         margin: 24px;
     }
-    #seccion-servicios div {
+    #seccion-servicios {
+        div {
         margin: 24px;
+        padding: 20px;
     }
 }
-
-// Estilos seccion Como lo hacemos seccion equipo 
-
-
-@media (max-width: 768px) {
-    .pasos { 
-        overflow-x: auto;
-        justify-content: flex-start; /* Centra las imágenes horizontalmente */
-    }
 }
+
 .fondo-info {
     background: radial-gradient(circle at 3% 90%, #ffffff, #892be128, #ffffff, #fded953e, #fe97082d);
     margin: 0px;
@@ -269,6 +316,7 @@ header {
         justify-content: center;
         align-items: center;
         white-space: nowrap;
+        overflow-x: auto; /* Permite desplazamiento horizontal */
         .pasos-detalle {
             min-width: 300px;
             max-width: 420px;
@@ -277,7 +325,7 @@ header {
             padding: 20px;
             margin: 20px;
             border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: 1.5px solid $paleta-violeta;
             p {
                 overflow: hidden; /* Oculta contenido desbordado */
                 text-overflow: ellipsis; /* Agrega "..." si el texto es muy largo */
@@ -314,16 +362,22 @@ header {
 }
 
 
-@media (max-width: 768px) {
-    .pasos { 
+@media (max-width: 500px) {
+    .fondo-info { 
+        .pasos { 
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        white-space: nowrap;
         overflow-x: auto;
-        justify-content: flex-start; /* Centra las imágenes horizontalmente */
     }
-    #seccion-equipo { 
-        margin-left: 24px; 
-        margin-right: 24px;
+        #seccion-equipo { 
+            margin-left: 24px; 
+            margin-right: 24px;
+        }
     }
 }
+
 
 // Estilos seccion final 
 #seccion-final {
@@ -479,319 +533,6 @@ header {
         width: 50px;
     }
 }
-
-
-/* Página quienes somos */
-.head-equipo {
-    color: #0000;
-    background:  radial-gradient(circle at 1% 80%, #ffffff, #892be128, #ffffff, #fded953e, #fe97082d);
-    margin: 0px;
-    
-    .titulo-pag-equipo {
-        .linea-quiensomos {
-            margin: 70px;
-            border-bottom: 3px solid black; /* Línea inferior */
-            margin-bottom: 20px;
-            h1 {
-                font-family: "Lexend Deca", serif;
-                font-weight: 500;
-                font-size: 90px;
-                margin-top: 120px;
-                margin-bottom: 20px;
-                margin-left: 0px;
-            } 
-        }
-        
-    }
-    .principal-equipo {
-        width: 100%;
-        display: block;
-        height: auto;
-        margin: 0px;
-        padding: 70px;
-        padding-top: 20px;
-    }
-    .columnas-equipo {
-        display: flex;
-        width: 100%;
-        align-items: flex-start; /* Centra verticalmente en desktop */
-        justify-content: space-between; /* Distribuye los elementos equitativamente */
-        padding-bottom: 120px;
-    
-        .texto-equipo {
-            width:100%; /* Ocupa la mitad en desktop */
-            padding-left: 70px;
-            margin-bottom: 20px; /* Agrega separación entre párrafos */
-            line-height: 1.6; /* Mejora la legibilidad */
-        }
-
-        .imagen2-equipo img {
-            width: 100%;
-            display: flex;
-            justify-content: center; /* Centra la imagen */
-        }
-        }
-
-}
-
-@media (max-width: 500px) {
-.head-equipo{
-    .titulo-pag-equipo {
-
-        .linea-quiensomos {
-            margin: 24px;
-            h1 {
-                font-size: 40px;
-                margin-bottom: 0px;
-            } 
-        }
-        }
-    
-    .principal-equipo {
-        padding: 24px;
-    }
-    .columnas-equipo {
-        margin: 0px;
-        flex-direction: column-reverse; /* Cambia a una sola columna */
-        text-align: left; /* Centra el texto */
-        p { 
-            margin-right: 24px;
-            margin-left: 24px;
-        }
-        .texto-equipo {
-            padding-left: 0px;
-            margin: 0px;
-            margin-right: 0px;
-            img {
-                display: flex;
-                align-items: flex-start;}
-        }
-    }
-
-    .imagen2-equipo {
-        width: 100%; /* Ocupan todo el ancho */
-        margin-top: 20px; /* Espacio entre el texto y la imagen */
-        max-width: 350px;
-    }
-}
-}
-// Página portfolio
-
-.head-portfolio {
-    background: black;
-    color: #fff;
-    .nav-links {
-        a {
-        color: white;
-    }
-}
-h1{
-    color: #fff;
-    font-family: "Lexend Deca", serif;
-    font-weight: 500;
-    font-size: 98.60px;
-    text-align: center;
-    width: 100%;
-    margin: 0px;
-    margin-top: 70px;
-    margin-bottom: 70px;
-    span {
-        color: $paleta-naranja;
-    }
-}
-}
-
-.imagenes-portfolio {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center;
-    align-items: center;
-    gap: 20px; 
-    padding: 40px;
-    div {
-        display: flex;
-        justify-content: center; /* Centra la imagen dentro del div */
-        align-items: center;
-    }
-    .imagenes-portfolio1 { 
-        max-width: 450px;
-        min-width: 280px;
-        height: auto;
-    }
-}
-
-@media (max-width: 500px) {
-    .head-portfolio {
-        h1 { 
-        font-size: 40px;
-        padding-left: 24px;
-        padding-right: 24px;
-    }
-}
-}
-
-// Detalle portfolio
-
-.fondo-negro-detalle {
-    background-color: black;
-
-    .titulo-pag-detalle {
-        h1 {
-            text-align: left;
-            border-bottom: 2.5px solid white; /* Línea inferior */
-            color: #fff;
-            margin-bottom: 20px;
-            font-size: 70px;
-            padding-bottom: 20px;
-            margin: 70px;
-        }
-        img { 
-            width: 100%;
-            padding: 70px;
-        }
-    }
-    .fondo {
-        width: 100%;
-        height: auto; 
-        background-image: url(../imagenes/difuminado.png);
-        background-size: cover; 
-        background-position: center; /* Centra la imagen */
-        background-repeat: no-repeat; /* Evita que la imagen se repita */
-        .columnas-proyecto {
-        display: flex;
-        width: 100%;
-        align-items: flex-start; /* Centra verticalmente en desktop */
-        justify-content: space-evenly; /* Distribuye los elementos equitativamente */
-        .texto-proyecto {
-            p {
-            color: white;
-            font-weight: 200;
-            width: 70%; /* Ocupa la mitad en desktop */
-            margin-bottom: 20px; /* Agrega separación entre párrafos */
-            line-height: 2; /* Mejora la legibilidad */
-            letter-spacing: 2px;
-            font-size: 24px;
-                }
-                }
-        .partes-proyecto { 
-            p {
-        color: white;
-        width: 700px; /* Ocupa la mitad en desktop */
-        padding-right:  70px;
-        margin-bottom: 20px; /* Agrega separación entre párrafos */
-        line-height: 3.5; /* Mejora la legibilidad */
-        margin: 0px;
-        font-weight: 200;
-        letter-spacing: 2px;
-                }
-                }
-                }
-    .concepto-generador {
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    text-align: center;
-    margin: 70px;
-
-    .concepto-detalles {
-        min-width: 280px;
-        max-width: 1200px;
-        height: auto;
-        background: rgba(0, 0, 0, 0.366);
-        padding: 40px;
-        margin: 100px;
-        border-radius: 20px;
-        border: 1px, solid white;
-    }
-    h2 {
-        color: white;
-        font-size: 32px;
-        font-weight: 300;
-        align-items: center;
-        margin: 0px;
-        padding: 20px;
-    }
-    p {
-        color: white;
-        font-size: 24px;
-        font-weight: 200;
-        align-items: center;
-        padding: 20px;
-        letter-spacing: 6px;
-        line-height: 35px;
-    }}
-
-    .carrusel-portfolio {
-        display: flex; /* Activa flexbox */
-        justify-content: flex-start; /* Centra las imágenes horizontalmente */
-        align-items: center; /* Alinea las imágenes verticalmente */
-        overflow-x: auto; /* Permite desplazamiento horizontal */
-        white-space: nowrap; /* Evita que las imágenes pasen a una nueva línea */
-        .imagen-detalle-proyecto {
-            width: 80%;
-            height: auto;
-            margin: 70px;
-        }}}
-    }
-
-    @media (max-width: 500px) {
-        .fondo-negro-detalle {
-            .titulo-pag-detalle {
-                h1 {
-                    font-size: 30px;
-                    margin: 24px;
-                }
-                img { 
-                    width: 100%;
-                    padding: 24px;
-                }
-            }
-        .fondo {
-                .columnas-proyecto {
-                display: flex;
-                flex-direction: column; /* Cambia a una sola columna */
-                text-align: left; /* Centra el texto */
-                .texto-proyecto {
-                    p {
-                    width: 95%; 
-                    padding-right: 24px;
-                    font-size: 20px;
-                    line-height: 28px;
-                }
-            }
-            .partes-proyecto { 
-                p {
-                width: 90%;
-                padding-right:  24px;
-                padding-left: 24px;
-                font-weight: 250;
-                    }
-            }
-        }
-            .concepto-generador {
-            margin: 24px;
-                .concepto-detalles {
-                padding: 0px;
-                margin: 24px;
-                }
-                h2 {
-                font-size: 20px;
-                margin: 0px;
-                padding: 20px;
-                }
-                p {
-                font-size: 18px;
-                letter-spacing: 2px;
-                line-height: 28px;
-                padding-top: 0px;
-                }
-            }
-            .carrusel-portfolio {
-                .imagen-detalle-proyecto {
-                    width: 100%;
-                    height: auto;
-                    margin: 24px;
-                }}}
-            } }
-            
+@import "partials/_pagina-equipo";
+@import "partials/_portfolio";
+@import "partials/_detalle-portfolio";
