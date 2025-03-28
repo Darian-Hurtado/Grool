@@ -164,3 +164,118 @@
                 }}}
             } }
             
+            @media (min-width: 501px) and (max-width: 768px) {
+                .fondo-negro-detalle {
+                    .titulo-pag-detalle {
+                        h1 {
+                            font-size: 30px;
+                            margin: 30px;
+                        }
+                        img { 
+                            width: 100%;
+                            padding: 30px;
+                        }
+                    }
+                .fondo {
+                        .columnas-proyecto {
+                        display: flex;
+                        flex-direction: column; /* Cambia a una sola columna */
+                        text-align: left; /* Centra el texto */
+                        .texto-proyecto {
+                            p {
+                            width: 95%; 
+                            padding-right: 30px;
+                            font-size: 20px;
+                            line-height: 28px;
+                        }
+                    }
+                    .partes-proyecto { 
+                        p {
+                        width: 90%;
+                        padding-right:  30px;
+                        padding-left: 30px;
+                        font-weight: 250;
+                            }
+                    }
+                }
+                    .concepto-generador {
+                    margin: 30px;
+                        .concepto-detalles {
+                        padding: 0px;
+                        margin: 24px;
+                        }
+                        h2 {
+                        font-size: 20px;
+                        margin: 0px;
+                        padding: 20px;
+                        }
+                        p {
+                        font-size: 18px;
+                        letter-spacing: 2px;
+                        line-height: 28px;
+                        padding-top: 0px;
+                        }
+                    }
+                    .carrusel-portfolio {
+                        .imagen-detalle-proyecto {
+                            width: 100%;
+                            height: auto;
+                            margin: 30px;
+                        }}}
+                    } }
+
+            @media (min-width: 769px) and (max-width: 1220px) { 
+                .fondo-negro-detalle {
+                    .titulo-pag-detalle {
+                        h1 {
+                            font-size: 30px;
+                            margin: 70px;
+                        }
+                        img { 
+                            width: 100%;
+                            padding: 70px;
+                        }
+                    }
+                .fondo {
+                        .columnas-proyecto {
+                        display: flex;
+                        flex-direction: column; /* Cambia a una sola columna */
+                        text-align: left; /* Centra el texto */
+                        .texto-proyecto {
+                            p {
+                            width: 90%; 
+                            padding-right: 70px;
+                            font-size: 20px;
+                            line-height: 28px;
+                        }
+                    }
+                    .partes-proyecto { 
+                        p {
+                        width: 90%;
+                        padding-right:  30px;
+                        padding-left: 70px;
+                        font-weight: 250;
+                            }
+                    }
+                
+                }
+                .concepto-generador {
+                    margin: 70px;
+                        .concepto-detalles {
+                        padding: 0px;
+                        margin: 24px;
+                        }
+                        h2 {
+                        font-size: 18px;
+                        margin: 0px;
+                        padding: 20px;
+                        }
+                        p {
+                        font-size: 18px;
+                        letter-spacing: 3px;
+                        line-height: 26px;
+                        padding-top: 0px;
+                        margin: 20px;
+                        }
+            }
+        }}}

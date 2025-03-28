@@ -52,6 +52,7 @@
 }
 
 @media (max-width: 500px) {
+
 .head-equipo{
     .titulo-pag-equipo {
 
@@ -84,11 +85,71 @@
                 align-items: flex-start;}
         }
     }
-
-    .imagen2-equipo {
-        width: 100%; /* Ocupan todo el ancho */
-        margin-top: 20px; /* Espacio entre el texto y la imagen */
-        max-width: 350px;
+}
+}
+    @media (min-width: 501px) and (max-width: 768px) { 
+        .head-equipo{
+            .titulo-pag-equipo {
+        
+                .linea-quiensomos {
+                    margin: 30px;
+                    h1 {
+                        font-size: 50px;
+                        margin-bottom: 0px;
+                    } 
+                }
+                }
+            
+            .principal-equipo {
+                padding: 30px;
+            }
+            .columnas-equipo {
+                margin: 0px;
+                flex-direction: column-reverse; /* Cambia a una sola columna */
+                text-align: left; /* Centra el texto */
+                p { 
+                    margin-right: 30px;
+                    margin-left: 30px;
+                }
+                .texto-equipo {
+                    padding-left: 0px;
+                    margin: 0px;
+                    margin-right: 0px;
+                    img {
+                        display: flex;
+                        align-items: flex-start;}
+                }
+            }
     }
 }
+    
+    @media (min-width: 769px) and (max-width: 1220px) {
+        .head-equipo{
+            .titulo-pag-equipo {
+        
+                .linea-quiensomos {
+                    margin: 70px;
+                    h1 {
+                        font-size: 50px;
+                        margin-bottom: 0px;
+                    } 
+                }
+                }
+            
+            .principal-equipo {
+                padding: 70px;
+            }
+                p { 
+                    margin-right: 70px;
+                    margin-left: 70px;
+                }
+            }
+    
+}
+
+
+.imagen2-equipo {
+    width: 100%; /* Ocupan todo el ancho */
+    margin-top: 20px; /* Espacio entre el texto y la imagen */
+    max-width: 350px;
 }

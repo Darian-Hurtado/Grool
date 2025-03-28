@@ -16,7 +16,7 @@ body {
     }
     p {
         color: black;
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 300;
         font-family: "Lexend Deca", serif;
         margin: 70px;
@@ -36,7 +36,7 @@ h2 {
 }
 h3 {
     color: black;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 400;
     font-family: "Lexend Deca", serif;
     margin: 70px;
@@ -53,7 +53,7 @@ h3 {
     text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     body { 
     h1 { font-size: 30px;
         margin: 24px;
@@ -72,6 +72,42 @@ h3 {
         margin: 24px;
     }
 }
+}
+
+@media (min-width: 501px) and (max-width: 768px) { 
+    body { 
+        h1 { font-size: 40px;
+            margin: 30px;
+        }
+        h2 {font-size: 30px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        h3 {font-size: 24px;
+            margin: 30px;
+        }
+        p {font-size: 18px;
+            margin: 30px;
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1220px) { 
+    body { 
+        h1 { font-size: 46px;
+            margin: 70px;
+        }
+        h2 {font-size: 36px;
+            margin-left: 70px;
+            margin-right: 70px;
+        }
+        h3 {font-size: 26px;
+            margin: 70px;
+        }
+        p {font-size: 20px;
+            margin: 70px;
+        }
+    }
 }
 
 // Estilos header
@@ -190,6 +226,27 @@ header {
         #ffffff 92%, 
         $paleta-amarillo 99%);
 }}
+@media (min-width: 501px) and (max-width: 768px) { 
+    header {
+        .cta-button {
+        margin: 30px;
+        margin-bottom: 120px;
+    }
+    h1 {
+        width: 65%;
+        margin: 30px;
+        font-size: 30px;
+    }
+    img {
+        margin: 30px;
+    }
+    .texto-inicio {
+        width: 70%;
+        margin: 30px;
+    }
+}
+}
+
 // Estilos seccion quienes somos
 
 #seccion-filosofia { 
@@ -294,13 +351,24 @@ header {
         }    
 }
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     h2 { font-size: 30px;
         margin: 24px;
     }
     #seccion-servicios {
         div {
         margin: 24px;
+        padding: 20px;
+    }
+}
+}
+@media (min-width: 501px) and (max-width: 768px) { 
+    h2 { font-size: 30px;
+        margin: 30px;
+    }
+    #seccion-servicios {
+        div {
+        margin: 30px;
         padding: 20px;
     }
 }
@@ -377,7 +445,22 @@ header {
         }
     }
 }
-
+@media (min-width: 501px) and (max-width: 768px) {
+    .fondo-info { 
+        .pasos { 
+            h3 { 
+                font-size: 20px;
+            }
+            p { 
+                font-size: 16px;
+            }
+        } 
+    #seccion-equipo { 
+        margin-left: 30px; 
+        margin-right: 30px;
+    }
+}
+}
 
 // Estilos seccion final 
 #seccion-final {
@@ -531,6 +614,21 @@ header {
     }
     .iconos-redes { 
         width: 50px;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+    #seccion-final {
+    .flecha {
+        margin: 0px;
+        margin-top: 0px;
+        margin-left: 30px;
+    }
+}
+    .footer {
+        margin: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }
 @import "partials/_pagina-equipo";

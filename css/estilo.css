@@ -12,7 +12,7 @@ body h1 {
 }
 body p {
   color: black;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 300;
   font-family: "Lexend Deca", serif;
   margin: 70px;
@@ -31,7 +31,7 @@ body h2 {
 }
 body h3 {
   color: black;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 400;
   font-family: "Lexend Deca", serif;
   margin: 70px;
@@ -46,7 +46,7 @@ body .letra-blanca {
   text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   body h1 {
     font-size: 30px;
     margin: 24px;
@@ -63,6 +63,44 @@ body .letra-blanca {
   body p {
     font-size: 18px; /* Tamaño de fuente para pantallas más pequeñas */
     margin: 24px;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  body h1 {
+    font-size: 40px;
+    margin: 30px;
+  }
+  body h2 {
+    font-size: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  body h3 {
+    font-size: 24px;
+    margin: 30px;
+  }
+  body p {
+    font-size: 18px;
+    margin: 30px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1220px) {
+  body h1 {
+    font-size: 46px;
+    margin: 70px;
+  }
+  body h2 {
+    font-size: 36px;
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+  body h3 {
+    font-size: 26px;
+    margin: 70px;
+  }
+  body p {
+    font-size: 20px;
+    margin: 70px;
   }
 }
 header {
@@ -147,6 +185,24 @@ header .cta-button:active {
   }
   .fondo-inicio {
     background: conic-gradient(from 340deg, #FDED95 1%, #fe9808 18%, #c46275 25%, #8a2be1 33%, #8a2be1 50%, #FDED95 68%, #ffffff 92%, #FDED95 99%);
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  header .cta-button {
+    margin: 30px;
+    margin-bottom: 120px;
+  }
+  header h1 {
+    width: 65%;
+    margin: 30px;
+    font-size: 30px;
+  }
+  header img {
+    margin: 30px;
+  }
+  header .texto-inicio {
+    width: 70%;
+    margin: 30px;
   }
 }
 #seccion-filosofia {
@@ -237,13 +293,23 @@ header .cta-button:active {
   background-image: url(../imagenes/hover-servicios-4.png);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   h2 {
     font-size: 30px;
     margin: 24px;
   }
   #seccion-servicios div {
     margin: 24px;
+    padding: 20px;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+    margin: 30px;
+  }
+  #seccion-servicios div {
+    margin: 30px;
     padding: 20px;
   }
 }
@@ -311,6 +377,18 @@ header .cta-button:active {
   .fondo-info #seccion-equipo {
     margin-left: 24px;
     margin-right: 24px;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  .fondo-info .pasos h3 {
+    font-size: 20px;
+  }
+  .fondo-info .pasos p {
+    font-size: 16px;
+  }
+  .fondo-info #seccion-equipo {
+    margin-left: 30px;
+    margin-right: 30px;
   }
 }
 #seccion-final {
@@ -458,6 +536,18 @@ header .cta-button:active {
     width: 50px;
   }
 }
+@media (min-width: 501px) and (max-width: 768px) {
+  #seccion-final .flecha {
+    margin: 0px;
+    margin-top: 0px;
+    margin-left: 30px;
+  }
+  .footer {
+    margin: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 /* Página quienes somos */
 .head-equipo {
   color: rgba(0, 0, 0, 0);
@@ -533,12 +623,59 @@ header .cta-button:active {
     display: flex;
     align-items: flex-start;
   }
-  .head-equipo .imagen2-equipo {
-    width: 100%; /* Ocupan todo el ancho */
-    margin-top: 20px; /* Espacio entre el texto y la imagen */
-    max-width: 350px;
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  .head-equipo .titulo-pag-equipo .linea-quiensomos {
+    margin: 30px;
+  }
+  .head-equipo .titulo-pag-equipo .linea-quiensomos h1 {
+    font-size: 50px;
+    margin-bottom: 0px;
+  }
+  .head-equipo .principal-equipo {
+    padding: 30px;
+  }
+  .head-equipo .columnas-equipo {
+    margin: 0px;
+    flex-direction: column-reverse; /* Cambia a una sola columna */
+    text-align: left; /* Centra el texto */
+  }
+  .head-equipo .columnas-equipo p {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  .head-equipo .columnas-equipo .texto-equipo {
+    padding-left: 0px;
+    margin: 0px;
+    margin-right: 0px;
+  }
+  .head-equipo .columnas-equipo .texto-equipo img {
+    display: flex;
+    align-items: flex-start;
   }
 }
+@media (min-width: 769px) and (max-width: 1220px) {
+  .head-equipo .titulo-pag-equipo .linea-quiensomos {
+    margin: 70px;
+  }
+  .head-equipo .titulo-pag-equipo .linea-quiensomos h1 {
+    font-size: 50px;
+    margin-bottom: 0px;
+  }
+  .head-equipo .principal-equipo {
+    padding: 70px;
+  }
+  .head-equipo p {
+    margin-right: 70px;
+    margin-left: 70px;
+  }
+}
+.imagen2-equipo {
+  width: 100%; /* Ocupan todo el ancho */
+  margin-top: 20px; /* Espacio entre el texto y la imagen */
+  max-width: 350px;
+}
+
 .head-portfolio {
   background: black;
   color: #fff;
@@ -732,6 +869,102 @@ header .cta-button:active {
     width: 100%;
     height: auto;
     margin: 24px;
+  }
+}
+@media (min-width: 501px) and (max-width: 768px) {
+  .fondo-negro-detalle .titulo-pag-detalle h1 {
+    font-size: 30px;
+    margin: 30px;
+  }
+  .fondo-negro-detalle .titulo-pag-detalle img {
+    width: 100%;
+    padding: 30px;
+  }
+  .fondo-negro-detalle .fondo .columnas-proyecto {
+    display: flex;
+    flex-direction: column; /* Cambia a una sola columna */
+    text-align: left; /* Centra el texto */
+  }
+  .fondo-negro-detalle .fondo .columnas-proyecto .texto-proyecto p {
+    width: 95%;
+    padding-right: 30px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .fondo-negro-detalle .fondo .columnas-proyecto .partes-proyecto p {
+    width: 90%;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-weight: 250;
+  }
+  .fondo-negro-detalle .fondo .concepto-generador {
+    margin: 30px;
+  }
+  .fondo-negro-detalle .fondo .concepto-generador .concepto-detalles {
+    padding: 0px;
+    margin: 24px;
+  }
+  .fondo-negro-detalle .fondo .concepto-generador h2 {
+    font-size: 20px;
+    margin: 0px;
+    padding: 20px;
+  }
+  .fondo-negro-detalle .fondo .concepto-generador p {
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 28px;
+    padding-top: 0px;
+  }
+  .fondo-negro-detalle .fondo .carrusel-portfolio .imagen-detalle-proyecto {
+    width: 100%;
+    height: auto;
+    margin: 30px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1220px) {
+  .fondo-negro-detalle .titulo-pag-detalle h1 {
+    font-size: 30px;
+    margin: 70px;
+  }
+  .fondo-negro-detalle .titulo-pag-detalle img {
+    width: 100%;
+    padding: 70px;
+  }
+  .fondo-negro-detalle .fondo .columnas-proyecto {
+    display: flex;
+    flex-direction: column; /* Cambia a una sola columna */
+    text-align: left; /* Centra el texto */
+  }
+  .fondo-negro-detalle .fondo .columnas-proyecto .texto-proyecto p {
+    width: 90%;
+    padding-right: 70px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .fondo-negro-detalle .fondo .columnas-proyecto .partes-proyecto p {
+    width: 90%;
+    padding-right: 30px;
+    padding-left: 70px;
+    font-weight: 250;
+  }
+  .fondo-negro-detalle .fondo .concepto-generador {
+    margin: 70px;
+  }
+  .fondo-negro-detalle .fondo .concepto-generador .concepto-detalles {
+    padding: 0px;
+    margin: 24px;
+  }
+  .fondo-negro-detalle .fondo .concepto-generador h2 {
+    font-size: 18px;
+    margin: 0px;
+    padding: 20px;
+  }
+  .fondo-negro-detalle .fondo .concepto-generador p {
+    font-size: 18px;
+    letter-spacing: 3px;
+    line-height: 26px;
+    padding-top: 0px;
+    margin: 20px;
   }
 }
 
