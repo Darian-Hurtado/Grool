@@ -206,17 +206,14 @@ header .cta-button:active {
   }
 }
 #seccion-filosofia {
-  background: radial-gradient(circle at center, rgba(253, 237, 149, 0.4), #ffffff, #ffffff, #ffffff);
-  margin-top: 30px;
-  margin-bottom: 0px;
   position: relative;
   overflow: hidden; /* Evita que el texto sobresalga */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 600px; /* Asegura que el título tenga su propia área */
-  padding-top: 0px;
+  height: 500 px; /* Asegura que el título tenga su propia área */
+  padding-top: 25px; /* Espaciado para que no toque el borde */
 }
 #seccion-filosofia span {
   color: #8a2be1;
@@ -238,7 +235,7 @@ header .cta-button:active {
   text-align: center;
   line-height: 150%;
   margin-top: 200px;
-  margin-bottom: 110px;
+  margin-bottom: 70px;
 }
 
 /* Animación del título */
@@ -350,46 +347,23 @@ header .cta-button:active {
   margin: 20px;
   white-space: wrap; /* Evita que el texto se divida en varias líneas */
 }
-
-#seccion-equipo {
+.fondo-info #seccion-equipo {
   margin: 70px;
-  margin-top: 0;
-  margin-bottom: 0;
-  right: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
-
-.organizacion-equipo {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  overflow-x: auto;
-  white-space: nowrap;
-  cursor: grab;
-  user-select: none;
-  /* Oculta la barra de scroll */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE y Edge antiguos */
+.fondo-info #seccion-equipo .organizacion-equipo {
+  display: flex; /* Activa flexbox */
+  justify-content: flex-start; /* Centra las imágenes horizontalmente */
+  align-items: center; /* Alinea las imágenes verticalmente */
+  overflow-x: auto; /* Permite desplazamiento horizontal */
+  white-space: nowrap; /* Evita que las imágenes pasen a una nueva línea */
 }
-
-.organizacion-equipo::-webkit-scrollbar {
-  display: none; /* Chrome, Safari y Opera */
-}
-
-.organizacion-equipo.active {
-  cursor: grabbing;
-}
-
-.organizacion-equipo img {
+.fondo-info #seccion-equipo .organizacion-equipo img {
   width: 280px;
   height: auto;
   border-radius: 20px;
   margin-right: 20px;
-  transition: transform 0.2s ease;
-  right: 0;
-}
-
-.organizacion-equipo img:hover {
-  transform: scale(1.05);
 }
 
 @media (max-width: 500px) {
@@ -589,7 +563,7 @@ header .cta-button:active {
   font-family: "Lexend Deca", serif;
   font-weight: 500;
   font-size: 90px;
-  margin-top: 150px;
+  margin-top: 120px;
   margin-bottom: 20px;
   margin-left: 0px;
 }
@@ -783,21 +757,21 @@ header .cta-button:active {
 .fondo-negro-detalle .fondo .columnas-proyecto .texto-proyecto p {
   color: white;
   font-weight: 200;
-  width: 80%; /* Ocupa la mitad en desktop */
+  width: 100%; /* Ocupa la mitad en desktop */
   margin-bottom: 15px; /* Agrega separación entre párrafos */
   line-height: 1.5; /* Mejora la legibilidad */
-  letter-spacing: 2px;
-  font-size: 20px;
+  letter-spacing: 1.5px;
+  font-size: 18px;
 }
 .fondo-negro-detalle .fondo .columnas-proyecto .partes-proyecto p {
   color: white;
-  width: 600px; /* Ocupa la mitad en desktop */
+  width: 30%; /* Ocupa la mitad en desktop */
   padding-right: 70px;
   margin-bottom: 20px; /* Agrega separación entre párrafos */
-  line-height: 2.5; /* Mejora la legibilidad */
+  line-height: 3.5; /* Mejora la legibilidad */
   margin: 0px;
   font-weight: 200;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 .fondo-negro-detalle .fondo .concepto-generador {
   display: flex;
@@ -831,7 +805,7 @@ header .cta-button:active {
   font-weight: 200;
   align-items: center;
   padding: 20px;
-  letter-spacing: 5px;
+  letter-spacing: 6px;
   line-height: 35px;
 }
 .fondo-negro-detalle .fondo .carrusel-portfolio {
