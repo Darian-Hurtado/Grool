@@ -2,33 +2,72 @@
 @import "partials/_variables";
 // estilos
 
+/* Nexa Regular */
+@font-face {
+    font-family: 'Nexa';
+    src: url('../fonts/Nexa-Regular.woff2') format('woff2'),
+        url('../fonts/Nexa-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Nexa Light */
+@font-face {
+    font-family: 'Nexa-Light';
+    src: url('../fonts/Nexa-Light.woff2') format('woff2'),
+        url('../fonts/Nexa-Light.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* Nexa Bold */
+@font-face {
+    font-family: 'Nexa';
+    src: url('../fonts/Nexa-Bold.woff2') format('woff2'),
+        url('../fonts/Nexa-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Safiro Regular */
+@font-face {
+    font-family: 'Safiro';
+    src: url('../fonts/Safiro-Regular.woff2') format('woff2'),
+        url('../fonts/Safiro-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
 body { 
     h1 {
     color: black;
     font-size: 48px;
-    font: medium;
-    font-family: "Raleway", serif;;
+    font-family: 'Safiro', serif;
     margin: 70px;
     margin-top: 130px;
     margin-bottom: 20px;
     width: 50%;
-    font-weight: 600;
+    font-weight: 300;
     }
     p {
         color: black;
-        font-size: 22px;
-        font-weight: 300;
-        font-family: "Lexend Deca", serif;
+        font-size: 23px;
+        font-weight: 50;
+        font-family: 'Nexa-Light', sans-serif;
+        font-style: light;
         margin: 70px;
         margin-bottom:20px;
         margin-top: 20px;
     }
     
+    strong {
+        font-weight: 700 !important;
+    }
 h2 {
     color: black;
     font-size: 64px;
-    font-weight: 400;
-    font-family: "Lexend Deca", serif;
+    font-weight: 500;
+    font-family: 'Nexa', sans-serif;
     margin: 70px;
     padding-top: 70px;
     padding-bottom: 20px;
@@ -38,7 +77,7 @@ h3 {
     color: black;
     font-size: 32px;
     font-weight: 400;
-    font-family: "Lexend Deca", serif;
+    font-family: 'Nexa', sans-serif;
     margin: 70px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -48,6 +87,9 @@ h3 {
 }
 }
 
+.texto-inicio {
+    width: 50%;
+}
 
 .centrado {
     text-align: center;
@@ -115,7 +157,7 @@ h3 {
 header {
     font-size: 20px;
     color: black;
-    font-family: "Lexend Deca", serif;
+    font-family: 'Nexa';
     background: conic-gradient(
     from 320deg, /* Ángulo de inicio del gradiente */
     $paleta-amarillo 1%,
@@ -131,7 +173,7 @@ header {
     
     .navbarpropio {
         ul {
-        margin-right: 70px;
+        margin-right: 500px;
     }
     }
 
@@ -145,7 +187,7 @@ header {
         margin-top: 15px;
         list-style: none;
         display: flex;
-        gap: 25px;
+        gap: 100px;
         margin-right: 70px;
         a {
             text-decoration: none;
@@ -167,7 +209,7 @@ header {
         font-weight: bold;
         margin: 70px;
         margin-top: 20px;
-        margin-bottom: 120px;
+        margin-bottom: 200px;
         font-size: 20px;
         font-family:  "Lexend Deca", serif;
         &:hover {
@@ -209,7 +251,10 @@ header {
         }
         img {
             margin: 24px;
+            width: 40px; /* Define el ancho deseado */
+           height: 40px; /* Mantiene la proporción original de la imagen */
         }
+
         .texto-inicio {
             width: 80%;
             margin: 24px;
@@ -251,7 +296,7 @@ header {
 
 #seccion-filosofia { 
     background: radial-gradient(circle at center,#fded9566, #ffffff, #ffffff,#ffffff);
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 0px;
     position: relative;
     overflow: hidden; /* Evita que el texto sobresalga */
@@ -259,7 +304,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 600px; /* Asegura que el título tenga su propia área */
+    height: 700px; /* Asegura que el título tenga su propia área */
     padding-top: 0px;
     
     span {
@@ -267,23 +312,25 @@ header {
     }
     .titulo-quienes-somos { 
         color: #892be144;
-        font-weight: 500;
+        font-weight: 700;
         font-size: 98.60px;
         white-space: nowrap; /* Evita que el texto salte de línea */
         position: absolute;
         top: 0;
-        left: 100%;
+        left: 50%;
+        margin-bottom: 200px;
         animation: marquee 15s linear infinite;
         animation-delay: -5s; 
     }
 
     .descripcion-grool {
-        width: 50%;
+        width: 60%;
         margin: 0 auto;
         text-align: center;
-        line-height: 150%;
-        margin-top:200px;
-        margin-bottom:110px;
+        font-size: 28px;
+        line-height: 170%;
+        margin-top:400px;
+        margin-bottom:250px;
     }
 }
 
@@ -303,15 +350,26 @@ header {
     margin-left: 24px;
     }
     .descripcion-grool {
-        width: 75%;
+        width: 80%;
+        font-size: 18px;
+        line-height: 170%;
+        margin-top: 100px;
+        margin-bottom:0px;
+    }
         }
     }
-}
+
 
 /* Estilos seccion servicios */
 #seccion-servicios { 
     background-color: black;
-    padding: 20px 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    h2 {
+        margin-bottom: 0px;
+    }
     span {
         color: $paleta-amarillo;
     }
@@ -319,7 +377,7 @@ header {
         border-top: 1.5px solid white; /* Línea superior */
         padding: 70px;
         h3 { /* elimimina smargen general (p) para trabajar div */
-            margin-left: 0px;}
+            margin-left: 0px; padding-bottom: 0px;}
         p { /* elimimina margen general (p) para trabajar div*/
                 margin-left: 0px}
 }
@@ -356,11 +414,14 @@ header {
 
 @media (max-width: 500px) {
     h2 { font-size: 30px;
-        margin: 24px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
     }
     #seccion-servicios {
         div {
         margin: 24px;
+        margin-bottom: 0px;
+        margin-top: 0px;
         padding: 20px;
     }
 }
@@ -381,7 +442,8 @@ header {
     background: radial-gradient(circle at 3% 90%, #ffffff, #892be128, #ffffff, #fded953e, #fe97082d);
     margin: 0px;
     background-size: 200% 200%; /* tamaño del efecto*/
-    padding-bottom: 140px;
+    padding-top: 70px;
+    padding-bottom: 200px;
     .pasos {
         display: flex;
         justify-content: center;
@@ -412,9 +474,186 @@ header {
         }
     }
     }
+
+/* Sección Confiaron en Grool*/
+/* Nueva estructura Confiaron en Grool */
+#seccion-confian {
+    padding: 100px 10%;
+    background: linear-gradient(180deg, #ffffff 0%, #f9f7ff 100%);
+}
+
+.texto-confian {
+    flex: 0 0 40%;
+}
+
+.texto-confian h2 {
+    font-family: "Lexend Deca", serif;
+    font-size: 72px;
+    font-weight: 500;
+    color: black;
+}
+
+.texto-confian span {
+  color: #8a2be1; /* tu violeta */
+}
+
+/* Carrusel de imágenes */
+.carrusel-confian {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.galeria-clientes {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    cursor: grab;
+    user-select: none;
+    scrollbar-width: none;
+}
+
+.galeria-clientes::-webkit-scrollbar {
+    display: none;
+}
+
+.galeria-clientes img {
+    width: 280px;
+    height: auto;
+    border-radius: 20px;
+    transition: transform 0.1s ease;
+}
+
+.galeria-clientes.active {
+    cursor: grabbing;
+}
+
+.confiaroncliente1:hover {
+    content: url("../imagenes/pantallacolor1.png")
+        }
+
+.confiaroncliente2:hover {
+    content: url("../imagenes/pantallacolor2.png")
+        }
+
+    
+.confiaroncliente3:hover {
+    content: url("../imagenes/pantallacolor3.png")
+        }
+
+.confiaroncliente4:hover {
+    content: url("../imagenes/pantallacolor4.png")
+        }
+
+.confiaroncliente5:hover {
+    content: url("../imagenes/pantallacolor5.png")
+        }
+
+.confiaroncliente6:hover {
+    content: url("../imagenes/pantallacolor6.png")
+        }
+
+p {
+        margin-top: 10px;
+        font-size: 16px;
+        font-family: 'Nexa-Light', sans-serif;
+        color: #666;
+        }
+
+
+/* Responsivo */
+@media (max-width: 992px) {
+    .contenedor-confian {
+    flex-direction: column;
+    align-items: flex-start;
+    }
+
+    .texto-confian {
+    flex: 1;
+    text-align: left;
+    }
+
+    .texto-confian h2 {
+    font-size: 48px;
+    }
+
+    .carrusel-confian {
+    width: 100%;
+    }
+
+    img {
+        max-width: 450px;
+        min-width: 280px;
+        height: auto;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+        }
+}
+
+
+
+/* Botón de El equipo */
+.boton-equipo {
+    text-align: center;
+    margin-top: 100px;
+
+.cta-button {
+    display: inline-block;
+    color: black;
+    border: 3px black, solid;
+    border-radius: 30px;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: "Lexend Deca", serif;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+
+&:hover {
+        background-color: $paleta-violeta;
+        color: white;
+        transform: scale(1.05);
+        border: 3px $paleta-violeta, solid;
+    }
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+#seccion-confian {
+    padding: 60px 30px;
+
+h2 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+.galeria-clientes {
+        flex-direction: column;
+        align-items: center;
+
+.cliente {
+        flex: 1 1 100%;
+        img {
+            max-width: 300px;
+        }
+        }
+    }
+    }
+
+.boton-equipo {
+.cta-button {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+    }
+}
+
 #seccion-equipo {
     margin: 70px;
-    margin-top: 0;
+    margin-top: 50px;
     margin-bottom: 0;
     right: 0;
 }
@@ -494,6 +733,8 @@ header {
     margin: 0px;
 
     .titulo-formulario {
+        font-family: 'Nexa', sans-serif;
+        font-size: 64px;
         width: 25%;
         color: #ffffff;
         padding-top: 120px;
@@ -512,7 +753,7 @@ header {
             background-color: #892be100;
             border-radius: 30px;
             font-size: 20px;
-            font-family:  "Lexend Deca", serif;
+            font-family:  'Nexa-Light', sans-serif;
             margin-top: 20px;
             margin-bottom: 20px;
             height: 48px;
@@ -524,7 +765,7 @@ header {
         background-color: #892be100;
         border-radius: 30px;
         font-size: 20px;
-        font-family:  "Lexend Deca", serif;
+        font-family:  'Nexa-Light', sans-serif;
         margin-top: 20px;
         margin-bottom: 20px;
         border-width: 2px;
@@ -534,7 +775,7 @@ header {
         display: block;
         color: #ffffff;
         font-size: 15px;
-        font-family: "Lexend Deca", serif;
+        font-family: 'Nexa-Light', sans-serif;
     }
     .cta-button {
         color: #ffffff;
@@ -547,7 +788,7 @@ header {
 .footer {
     background-color: black;
     background-image: url("../imagenes/difuminado.png");
-    font-family: "Lexend Deca", serif;
+    font-family: "Nexa", sans-serif;
     display: flex; /* Activa flexbox */
     justify-content: space-between; /* Coloca el texto a la izquierda y el logo a la derecha */
     align-items: end;
@@ -566,7 +807,7 @@ header {
         h2 {
             color: $paleta-amarillo;
             font-size: 18px;
-            font: normal;
+            font-family: 'Nexa', sans-serif;
             margin: 0px;
             text-align: left;
         }
@@ -574,6 +815,7 @@ header {
             list-style: none;
             padding-left: 0px;
             a {
+                font-family: 'Nexa-Light', sans-serif;
                 font-weight: normal;
                 text-decoration: none;
                 color: #fff;
@@ -636,9 +878,10 @@ header {
     .redes-sociales {
         gap: 15px;
         margin-right: 0px;
-    }
-    .iconos-redes { 
-        width: 50px;
+        .iconos-redes {
+                    width: 50px; /* Define el ancho deseado */
+                    height: auto; /* Mantiene la proporción original de la imagen */
+                }
     }
 }
 

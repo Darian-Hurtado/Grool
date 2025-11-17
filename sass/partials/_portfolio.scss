@@ -11,7 +11,7 @@
 }
 h1{
     color: #fff;
-    font-family: "Lexend Deca", serif;
+    font-family: "Nexa", sans-serif;
     font-weight: 500;
     font-size: 98.60px;
     text-align: center;
@@ -42,8 +42,57 @@ h1{
         min-width: 280px;
         height: auto;
     }
+    .imagenes-portfolio2 { 
+        max-width: 450px;
+        min-width: 280px;
+        height: auto;
+    }
+    .imagenes-portfolio3 { 
+        max-width: 450px;
+        min-width: 280px;
+        height: auto;
+    }   
+    .imagenes-portfolio4 { 
+        max-width: 450px;
+        min-width: 280px;
+        height: auto;
+    }
+    .imagenes-portfolio5 { 
+        max-width: 450px;
+        min-width: 280px;
+        height: auto;
+    }
+    .imagenes-portfolio6 { 
+        max-width: 450px;
+        min-width: 280px;
+        height: auto;
+    }
 }
 
+.imagenes-portfolio1:hover {
+    content: url("../imagenes/cliente1hover.png")
+        }   
+
+.imagenes-portfolio2:hover {
+    content: url("../imagenes/cliente2hover.png")
+        } 
+        
+.imagenes-portfolio3:hover {
+    content: url("../imagenes/cliente3hover.png")
+        } 
+
+.imagenes-portfolio4:hover {
+    content: url("../imagenes/cliente4hover.png")
+        }  
+
+.imagenes-portfolio5:hover {
+    content: url("../imagenes/cliente5hover.png")
+        }  
+
+.imagenes-portfolio6:hover {
+    content: url("../imagenes/cliente6hover.png")
+        }  
+    
 @media (max-width: 500px) {
     .head-portfolio {
         h1 { 
